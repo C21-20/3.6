@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listeners</title>
+</head>
+<body>
+    <button id="myButton">Кнопка</button>
+
+    <script>
+        const myButton = document.getElementById('myButton');
+
+        function firstEventHandler() {
+            console.log('Подія виникла');
+        }
+
+        function secondEventHandler() {
+            console.log('Ще один обробник події');
+        }
+
+        myButton.addEventListener('click', firstEventHandler);
+        myButton.addEventListener('click', secondEventHandler);
+    </script>
+</body>
+</html>

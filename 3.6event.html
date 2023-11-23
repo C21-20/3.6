@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Input Event</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s ease;
+        }
+        input:focus {
+            border-color: #c40707;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="myInput" placeholder="Введіть текст">
+
+    <script>
+        document.getElementById("myInput").addEventListener("keyup", function(event) {
+            if (event.target.value === 'натиснути') {
+                const message = document.createElement('div');
+                message.style.position = 'absolute';
+                message.style.top = '20px';
+                message.style.left = '20px';
+                message.style.padding = '10px';
+                message.style.backgroundColor = '#3498db';
+                message.style.color = 'white';
+                message.innerText = 'Клавіша була натиснута!';
+                document.body.appendChild(message);
+                setTimeout(() => {
+                    message.remove();
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Фокус події</title>
+</head>
+<body>
+    <input type="text" id="myInput" placeholder="Введіть текст">
+    <button id="myButton">Натисни мене</button>
+
+    <script>
+        const inputField = document.getElementById("myInput");
+
+        inputField.addEventListener("focus", function() {
+            console.log("Елемент отримав фокус!");
+        });
+
+        inputField.addEventListener("blur", function() {
+            console.log("Елемент втратив фокус!");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Click Event</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #dd30f4;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #29b952;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">click here</button>
+
+    <script>
+        document.getElementById("myButton").addEventListener("click", function() {
+            alert("the button was pressed!");
+        });
+    </script>
+</body>
+</html>
